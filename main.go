@@ -3,19 +3,31 @@ package main
 import "fmt"
 
 func main() {
-	// for n := 1; n <= 10; n++ { // declare; condition; postcondition
-	// 	fmt.Println(n)
+	// day := "Sunday"
+
+	// switch day { // Case by case -> cannot group 2 case like other languages
+	// case "Sunday":
+	// 	fmt.Println("Weekend") // Auto break -> no need to break
+	// case "Saturday":
+	// 	fmt.Println("Weekend")
+	// default:
+	// 	fmt.Println("Workday")
 	// }
 
-	// There is no while in GoLang -> use for
-	n := 1        // declare
-	for n <= 10 { // _ ; condition; _
-		fmt.Println(n)
-		n++ // postcondition
+	// // GROUPED CONDITION
+	// switch day {
+	// case "Sunday", "Saturday":
+	// 	fmt.Println("Weekend")
+	// default:
+	// 	fmt.Println("Workday")
+	// }
+
+	// DECLARE AND CONDITION
+
+	switch day := "Sunday"; day { // use ;
+	case "Sunday", "Saturday":
+		fmt.Println("Weekend")
+	default:
+		fmt.Println("Workday")
 	}
-
-	// // INFINITE FOR (FOREVER)
-	// for {
-	// 	fmt.Println("Hello")
-	// }
 }
