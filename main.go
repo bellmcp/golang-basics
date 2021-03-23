@@ -3,38 +3,36 @@ package main
 import "fmt"
 
 func main() {
-	// var i int -> ZERO VALUE = 0
-	// var i bool -> ZERO VALUE = false
+	// const pi = 3.14 //immutable
+	// ** GoLang convention does not use uppercase const like other languages
 
-	// var i int = 20
+	// MULTIPLE DECLARATION
+	// const (
+	// 	i = 1
+	// 	j // j will have the same value as i
+	// )
 
-	// var i int
-	// i = 20
+	// const (
+	// 	red   = iota // 0 -> automatic order declaration start with 0
+	// 	green        // 1
+	// 	blue         // 2
+	// )
 
-	// i := 20 // NO NEED TO DECLARE TYPE
-	// i = false -> NOT ALLOW
+	// const (
+	// 	red   = iota + 1 // 1
+	// 	green            // 2
+	// 	blue             // 3
+	// )
 
-	// TYPE CONVERSION
-	i := 20.02
-	j := int(i) // j = 20 (int)
+	const (
+		sun = iota + 1 // 1
+		mon            // 2
+		tue            // 3
+		_              // skip
+		_              // skip
+		_              // skip
+		sat            // 7
+	)
 
-	// TYPE														ZERO VALUE
-	// bool														false
-	// string													""
-
-	// int int8,16,32,64 -> Can store +/-/0						0
-	// -> int8,16,32,64 = bit -> how much value can store
-	// -> default int -> automatic matching with cpu bit (eg. 64 bit)
-
-	// uint unint8,16,32,64 unitptr -> Can store + only			0
-
-	// byte -> alias(nickname) for unit8
-	// rune -> alias(nickname) for int32
-
-	// float32,64 -> float num									0
-	// ** no default float
-
-	// complex64,128 -> complex num								(0 + 0i)
-
-	fmt.Println(j)
+	fmt.Println(sat)
 }
