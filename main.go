@@ -1,38 +1,35 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
-	// const pi = 3.14 //immutable
-	// ** GoLang convention does not use uppercase const like other languages
+	// num := 21
 
-	// MULTIPLE DECLARATION
-	// const (
-	// 	i = 1
-	// 	j // j will have the same value as i
-	// )
+	// if num%2 == 0 {
+	// 	fmt.Println("Even")
+	// } else {
+	// 	fmt.Println("Odd")
+	// }
 
-	// const (
-	// 	red   = iota // 0 -> automatic order declaration start with 0
-	// 	green        // 1
-	// 	blue         // 2
-	// )
+	// os := runtime.GOOS
 
-	// const (
-	// 	red   = iota + 1 // 1
-	// 	green            // 2
-	// 	blue             // 3
-	// )
+	// if os == "darwin" {
+	// 	fmt.Println("You cool")
+	// } else if os == "windows" {
+	// 	fmt.Println("Switch to mac")
+	// } else {
+	// 	fmt.Println("T_T")
+	// }
 
-	const (
-		sun = iota + 1 // 1
-		mon            // 2
-		tue            // 3
-		_              // skip
-		_              // skip
-		_              // skip
-		sat            // 7
-	)
-
-	fmt.Println(sat)
+	// MERGE DECLARATION AND CONDITION
+	if os := runtime.GOOS; os == "darwin" { // use ;
+		fmt.Println("You cool")
+	} else if os == "windows" {
+		fmt.Println("Switch to mac")
+	} else {
+		fmt.Println("T_T")
+	}
 }
