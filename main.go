@@ -1,35 +1,21 @@
 package main
 
-import (
-	"fmt"
-	"runtime"
-)
+import "fmt"
 
 func main() {
-	// num := 21
-
-	// if num%2 == 0 {
-	// 	fmt.Println("Even")
-	// } else {
-	// 	fmt.Println("Odd")
+	// for n := 1; n <= 10; n++ { // declare; condition; postcondition
+	// 	fmt.Println(n)
 	// }
 
-	// os := runtime.GOOS
-
-	// if os == "darwin" {
-	// 	fmt.Println("You cool")
-	// } else if os == "windows" {
-	// 	fmt.Println("Switch to mac")
-	// } else {
-	// 	fmt.Println("T_T")
-	// }
-
-	// MERGE DECLARATION AND CONDITION
-	if os := runtime.GOOS; os == "darwin" { // use ;
-		fmt.Println("You cool")
-	} else if os == "windows" {
-		fmt.Println("Switch to mac")
-	} else {
-		fmt.Println("T_T")
+	// There is no while in GoLang -> use for
+	n := 1        // declare
+	for n <= 10 { // _ ; condition; _
+		fmt.Println(n)
+		n++ // postcondition
 	}
+
+	// // INFINITE FOR (FOREVER)
+	// for {
+	// 	fmt.Println("Hello")
+	// }
 }
