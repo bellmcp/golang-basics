@@ -2,17 +2,24 @@ package main
 
 import "fmt"
 
-// 0xc00010c008 (memory address)		20
+// func inc(num int) int {
+// 	return num + 1
+// }
+
+// func inc(num int) int {
+// 	return num + 1
+// }
+
+func inc(num *int) {
+	*num++ //*num = *num + 1
+	// -> *num = get the value of the address of num
+}
+
 func main() {
-	// var pointer *int // *int = pointer at int
-	// i := 20
-
-	// pointer = &i // get the memory address of i (0xc00010c008)
-	// fmt.Println(pointer)
-	// fmt.Println(*pointer) // get value from the memory address of i (20)
-
 	i := 20
-	pointer := &i // SHORT HAND get the pointer at int i
-	fmt.Println(pointer)
-	fmt.Println(*pointer)
+	// result := inc(i) // send the copied of i to the function  -> PASSED BY VALUE
+
+	inc(&i) // send the copied of memory address of i to the function -> PASSED BY VALUE
+
+	fmt.Println(i) //21
 }
