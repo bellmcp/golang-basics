@@ -2,24 +2,25 @@ package main
 
 import "fmt"
 
-// func inc(num int) int {
-// 	return num + 1
-// }
-
-// func inc(num int) int {
-// 	return num + 1
-// }
-
-func inc(num *int) {
-	*num++ //*num = *num + 1
-	// -> *num = get the value of the address of num
-}
-
 func main() {
-	i := 20
-	// result := inc(i) // send the copied of i to the function  -> PASSED BY VALUE
+	// arr := [3]string{"A", "B", "C"}
+	// arr := [...]string{"A", "B", "C"} -> ... = auto assign array size
+	// arr[1] = "B"
 
-	inc(&i) // send the copied of memory address of i to the function -> PASSED BY VALUE
+	// ASSIGN SOME VALUE
+	// arr := [3]string{1: "E"} -> ["", "E", ""]
+	// arr := [...]string{1: "E"}
 
-	fmt.Println(i) //21
+	const (
+		TH int = iota
+		EN
+		CH
+	)
+	capitals := [...]string{
+		TH: "Bangkok",
+		EN: "London",
+		CH: "Japan",
+	}
+	fmt.Println(capitals[1])
+	fmt.Println(capitals[EN])
 }
